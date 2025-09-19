@@ -3,67 +3,209 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+      <link rel="stylesheet" href = "introStyle.css">
+      <link rel = "stylesheet" href = "faculty.css">
+      <link rel="stylesheet" href = "styleHome.css">
+
   <title>Welcome to the V.V. Varsity</title>
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: sans-serif;
-    }
-
-    .intro {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      opacity: 1;
-      transition: opacity 1s ease-out;
-      overflow: hidden;
-    }
-
-    .intro video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-    }
-
-    .intro.fade-out {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .mainContent {
-      padding: 2rem;
-    }
-  </style>
 </head>
 
 <body>
+
+  <!--Video animation-->
   <div class="intro" id="intro">
     <video autoplay muted playsinline id="introVideo">
       <source src="VV.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-
-  <div id="mainContent" class="hidden">
-    <h1>Welcome to V.V. Varsity</h1>
-    <p>Explore our programs, values, and vision.</p>
   
+ 
+<div class="navbar">
+  <div class="nav-left">
+    <h1>📞 +27 18 218 3467 | ✉️ info@vvvarsity.ac.za</h1>
   </div>
+
+  <div class="nav-center">
+    <a href="home.html">
+      <img src="Images/VVVarsityB.png" alt="V.V Varsity" />
+    </a>
+  </div>
+
+  <div class="nav-right">
+    <ul>
+      <li> <b> <a href="home.html">home </b> </a> </li>
+      <li> <b> <a href="about.html">About us </b> </a> </li>
+      <li> <b> <a href="registration.html">Apply Now </b> </a> </li>
+    </ul>
+  </div>
+</div>
+
+  
+  <div class = "banner">
+   <div id="mainContent" class="hidden">
+      <h1> Welcome to V.V. Varsity </h1>
+    <p>Explore our programs, values, and vision.</p>
+    <a href ="#faculties"><button> <span></span>Explore </button></a>
+      </div>
+    </div>
+   
+ 
+   
+ <header>
+  <h1 id = "faculties">University Faculties</h1>
+  <p>The University’s Faculties of Science, Arts, Economics, and Law form the cornerstone of its academic excellence, offering a wide range of programs designed to prepare students for future careers while advancing knowledge and research. Each faculty is committed to innovation, practical learning, and addressing societal needs in South Africa and beyond.</p>
+  <p>Click on a faculty image to learn more</p>
+</header>
+
+<div id="mainPage" class="faculties">
+  <div class="faculty-card" onclick="showInfo('science')">
+    <img src="Images/Science.jpg" alt="Science Faculty">
+    <h3>Faculty of Science</h3>
+  </div>
+  <div class="faculty-card" onclick="showInfo('law')">
+    <img src="Images/Law.jpg" alt="Law Faculty">
+    <h3>Faculty of Law</h3>
+  </div>
+  <div class="faculty-card" onclick="showInfo('economics')">
+    <img src="Images/Economics.jpg" alt="Economics Faculty">
+    <h3>Faculty of Economics</h3>
+  </div>
+  <div class="faculty-card" onclick="showInfo('Engineering')">
+    <img src="Images/Engineering.jpeg" alt="Engineering Faculty">
+    <h3>Faculty of Engineering</h3>
+  </div>
+</div>
+
+<div id="science" class="info-section">
+  <div class="faculty-info">
+    <img src="Images/prof1.jpg" alt="Head of Science Faculty">
+    <div>
+      <h2>Faculty of Science</h2>
+      <p>Contact: Dr. John Doe</p>
+      <p>Email: johndoe@university.edu</p>
+    </div>
+  </div>
+  <p>The Faculty of Science is dedicated to advancing knowledge and discovery in areas such as physics, chemistry, biology, and computer science. It provides students with both theoretical knowledge and practical laboratory experience to solve real-world problems.</p>
+  <h3>Departments & Disciplines</h3>
+  <p>Biological Sciences<br>Chemistry<br>Physics<br>Mathematics<br>Computer Science<br>Earth Sciences</p>
+  <h3>Facilities & Resources</h3>
+  <p>The faculty is equipped with advanced laboratories, modern computer labs, and research centers. It maintains strong collaborations with industries to ensure graduates are prepared for the workforce.</p>
+  <h3>Career Opportunities</h3>
+  <p>Graduates can pursue careers in research, information technology, biotechnology, education, environmental management, and scientific innovation both locally and internationally.</p>
+  <button class="back-btn" onclick="goBack()">⬅ Back</button>
+</div>
+
+<div id="law" class="info-section">
+  <div class="faculty-info">
+    <img src="Images/prof2.jpg" alt="Head of Law Faculty">
+    <div>
+      <h2>Faculty of Law</h2>
+      <p>Contact: Dr. Jane Smith</p>
+      <p>Email: janesmith@university.edu</p>
+    </div>
+  </div>
+  <p>The Faculty of Law equips students with comprehensive knowledge of legal systems, human rights, and governance. It prepares graduates to uphold justice and contribute to society through law and policy-making.</p>
+  <h3>Departments & Disciplines</h3>
+  <p>Public Law<br>Private Law<br>Commercial Law<br>International Law<br>Legal Practice</p>
+  <h3>Career Opportunities</h3>
+  <p>Law graduates can become lawyers, judges, legal advisors, diplomats, or policy specialists, contributing to the justice system and global governance structures.</p>
+  <button class="back-btn" onclick="goBack()">⬅ Back</button>
+</div>
+
+<div id="economics" class="info-section">
+  <div class="faculty-info">
+    <img src="Images/prof4.jpg" alt="Head of Economics Faculty">
+    <div>
+      <h2>Faculty of Economics</h2>
+      <p>Contact: Dr. Grey White</p>
+      <p>Email: greywhite@university.edu</p>
+    </div>
+  </div>
+  <p>The Faculty of Economics provides students with deep expertise in financial systems, trade, and business practices. It emphasizes entrepreneurship, data analysis, and critical thinking to address economic challenges facing the modern world.</p>
+  <h3>Departments & Disciplines</h3>
+  <p>Economics<br>Accounting<br>Finance<br>Business Management<br>Statistics</p>
+  <h3>Career Opportunities</h3>
+  <p>Graduates can work in banking, consulting, entrepreneurship, financial management, and government policy development, contributing to national and global economies.</p>
+  <button class="back-btn" onclick="goBack()">⬅ Back</button>
+</div>
+
+<div id="Engineering" class="info-section">
+  <div class="faculty-info">
+    <img src="Images/prof5.jpg" alt="Head of Enginering Faculty">
+    <div>
+      <h2>Faculty of Engineering</h2>
+      <p>Contact: Dr. Philip Brown</p>
+      <p>Email: philipbrown@university.edu</p>
+    </div>
+  </div>
+  <p>The Faculty of Engineering is dedicated to shaping the future through innovation, research, and practical problem-solving.
+     We empower students to become world-class engineers who tackle real-world challenges with creativity and precision.</p>
+ <h3>Academic Programs</h3>
+<p>We offer a diverse range of undergraduate and postgraduate programs across multiple disciplines:<br>
+- Mechanical Engineering<br>
+- Electrical & Electronic Engineering<br>
+- Chemical Engineering<br>
+- Civil Engineering<br>
+- Industrial Engineering<br>
+- Computer & Electronic Engineering<br>
+- Mechatronic & Electromechanical Engineering<br>
+Each program is accredited by professional bodies and designed to meet both local and global industry standards.</p>
+ <h4>Research & Innovation</h4>
+<p>Our faculty is a hub for cutting-edge research. From deep learning and sustainable technologies to smart infrastructure and energy systems, 
+  we collaborate with industry and academic partners to develop solutions that matter.</p>
+<h5>Why Choose Us?</h5>
+<p>- Globally competitive programs with local relevance<br>
+- Strong industry partnerships<br>
+- Supportive academic success coaches<br>
+- A culture of innovation and excellence</p>
+  <button class="back-btn" onclick="goBack()">⬅ Back</button>
+</div>
+
+<section class="admissions">
+    <h3>Apply for Admission</h3>
+    <p>Applications for February 2026 are now open. Join a community that values innovation, diversity, and excellence.</p>
+   <a href = "registration.html"> <button><span></span>Start Your Application</button></a>
+  </section>
+  
+<footer>
+    <div class="container">
+     <div class="footer-content">
+                <h3 style="color:#fff;"><u>About us</u></h3>
+                <p>Email: info@vvvarsity.co.za</p>
+                <p>Call:018 212 3345</p>
+                <p> Address: <br> 12 West Street
+                   <br> Mahikeng  <br>2745.
+                </p>
+               </div> 
+               <div class="footer-content">
+                <h3 style="color:#fff;"><u>Quick links</u></h3>
+                  <ul class="list">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="registration.html">Apply</a></li>
+                    
+                  </ul>
+               </div> 
+               <div class="footer-content">
+                
+                <h3 style="color:#fff;"><u>Follow us</u></h3>
+                <li><img src="Images/facebook.png" style="height:40px;"><a href="#"> @V.V.Varsity</a></li>
+                <li><img src="Images/instagram.png"style="height:40px;"> <a href="#">@vv_varsity</li></a>
+                <li><img src="Images/twitter.png"style="height:40px;">  <a href="#"> @vv_varsity_sa</li></a>
+               </div> 
+            </div>
+            <div class="bottom-bar">
+                <p>&copy; 2025 V.V. Varsity. All rights reserved</p>
+            </div>
+    </div>
+   
+   
+   
+   
+</div>
+
 
   <script>
     window.addEventListener("load", () => {
@@ -78,6 +220,24 @@
         }, 1000); 
       }, 5000);
     });
+   
+    function showInfo(facultyId) {
+  document.getElementById("mainPage").style.display = "none";
+  document.querySelectorAll(".info-section").forEach(section => {
+    section.classList.remove("show");
+  });
+  const selected = document.getElementById(facultyId);
+  selected.style.display = "block";
+  setTimeout(() => selected.classList.add("show"), 10);
+}
+function goBack() {
+  document.getElementById("mainPage").style.display = "flex";
+  document.querySelectorAll(".info-section").forEach(section => {
+    section.classList.remove("show");
+    setTimeout(() => section.style.display = "none", 400);
+  });
+}
+   
   </script>
 </body>
 </html>
