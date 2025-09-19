@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athletics Department - V.V. University</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 40px;
+    }
+
+    .sports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .sport-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .sport-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .sport-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .sport-card h3 {
+      margin: 10px 0;
+      color: #004080;
+    }
+
+    .sport-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .footer-content {
+        margin-bottom: 20px;
+    }
+    .socials {
+        list-style: none;
+        padding: 0;
+    }
+    .socials li {
+        display: inline;
+        margin: 0 10px;
+    }
+    .socials a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .footer-bottom {
+        font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Athletics Department</h1>
+    <p>Building strength, spirit, and community through sport</p>
+  </header>
+
+  <div class="container">
+    <h2>Our Sports</h2>
+    <div class="sports-grid">
+      
+      <div class="sport-card">
+        <img src="Images/rugby.jpg" alt="Rugby">
+        <h3>Rugby</h3>
+        <p>Join our powerful rugby team and experience teamwork, endurance, and strategy on the field.</p>
+      </div>
+
+      <div class="sport-card">
+        <img src="Images/netball.jpg" alt="Netball">
+        <h3>Netball</h3>
+        <p>Our netball team fosters agility, coordination, and sportsmanship in a fast-paced game.</p>
+      </div>
+
+      <div class="sport-card">
+        <img src="Images/soccer.jpg" alt="Soccer"> 
+        <h3>Soccer</h3>
+        <p>From local matches to tournaments, soccer unites players with passion and skill.</p>
+      </div>
+
+      <div class="sport-card">
+        <img src="Images/tennis.jpg" alt="Tennis">
+        <h3>Tennis</h3>
+        <p>Train with focus and precision in both singles and doubles tennis matches.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+        <h3>V.V.Varsity</h3>
+        <p>Address: 123 University Ave, NorthWest , South Africa, 2078</p>
+        <p>Email: vvvarsity.ac.za | Phone: (+27) 18 218 3467</p>
+        <ul class="socials">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; v.v.varsity. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

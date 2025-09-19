@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title> V.V. Varsity</title>
+    <link rel="stylesheet" href ="formStyle.css">
+    <link rel="stylesheet" href ="login.css">
+    
+    
+    
+<style>
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 10px 40px;
+  background-color: #FFF0DC;
+  z-index: 500;
+  height: 80px;
+
+ 
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+}
+
+
+.nav-left h1 {
+  font-size: 24px;
+  color: #003366;
+  margin: 0;
+  justify-self: start; 
+}
+
+
+.nav-center img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+.nav-right { justify-self: end; } 
+
+.nav-right ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right ul li {
+  position: relative; 
+  margin: 0;          
+}
+
+.nav-right ul li a {
+  text-decoration: none;
+  color: #003366;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar ul li::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -5px;
+  width: 0; height: 3px;
+  background-color: #009688;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.banner {
+  margin-top: 60px; 
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('Images/home2.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+#mainContent h1,
+#mainContent p,
+#mainContent a {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#mainContent h1 {
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+#mainContent p {
+  animation: slideIn 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
+
+#mainContent a {
+  animation: slideIn 0.8s ease-out forwards;
+  animation-delay: 2s;
+}
+footer{
+        background: #343434;
+        padding-top: 50px;
+        max-height: 300px;
+}
+ .container2{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+        color: #fff;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #f18930;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+ 
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover{
+        color: #f18930;
+    }
+    
+    .bottom-bar{
+        background: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+      
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+    </style>
+</head>
+
+<body>
+  <div class = "banner">
+   <div id="mainContent" class="hidden">
+      <h1> Register and apply now, for 2026!</h1>
+    <p>Click on the button below to get started!</p>
+    <a href ="#register"><button> <span></span>Register </button></a>
+      </div>
+    </div>
+
+ <div class="navbar">
+  <div class="nav-left">
+    <h1>📞 +27 18 218 3467 | ✉️ info@vvvarsity.ac.za</h1>
+  </div>
+
+  <div class="nav-center">
+    <a href="home.html">
+      <img src="Images/VVVarsityB.png" alt="V.V Varsity" />
+    </a>
+  </div>
+
+  <div class="nav-right">
+    <ul>
+      <li><a href="home.html">home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="registration.html">Apply Now</a></li>
+    </ul>
+  </div>
+</div>
+
+ 
+
+<div class="main">    
+  <input type="checkbox" id="chk" aria-hidden="true">
+   
+            <div class="signup">
+               
+                <form>
+                  
+                   <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="txt" placeholder="User name" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button class = "button2">Sign up</button>
+                </form>
+            </div>
+ 
+            <div class="login">
+                <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button class = "button2">Login</button>
+                </form>
+            </div>
+    </div>
+
+
+<div class="container" id = "register"> 
+    <h1> Registration Form</h1>
+    <h2>V.V. Varsity</h2>
+    
+    <form>
+        <h3>Personal Information</h3>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+          <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="Gender">Gender:</label>
+        <select id = "genderSelect" name ="gender"require aria-label = "Gender">
+          <option value="">_Select gender_</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <h3>Academic Information</h3>
+        <label for="program">Program Applying For:</label>
+        <input type="text" id="program" name="program" required>
+
+        <label for="faculty">Faculty:</label>
+        <select id="faculty" name="faculty">
+            <option value="science">Science</option>
+            <option value="law">Law</option>
+            <option value="Econimics">Economics</option>
+            <option value="Engineering">Engineering</option>
+        </select>
+
+        <label>Year of Study:</label>
+        <input type="checkbox" id="firstYear" name="year" value="1stYear"> <label for="firstYear">1st Year</label>
+        <input type="checkbox" id="secondYear" name="year" value="2ndYear"> <label for="secondYear">2nd Year</label>
+        <input type="checkbox" id="thirdYear" name="year" value="3rdYear"> <label for="thirdYear">3rd Year</label>
+        <input type="checkbox" id="fourthYear" name="year" value="4thYear"> <label for="fourthYear">4th Year</label>
+
+        <label>Student Type:</label>
+        <input type="checkbox" id="fullTime" name="studentType" value="fullTime"> <label for="fullTime">Full-time</label>
+        <input type="checkbox" id="partTime" name="studentType" value="partTime"> <label for="partTime">Part-time</label>
+        <input type="checkbox" id="international" name="studentType" value="international"> <label for="international">International</label>
+
+        <h3>Terms & Conditions</h3>
+        <input type="checkbox" id="terms" name="terms" required> <label for="terms">I have read and agree to the Terms & Conditions listed below:</label>
+        <p>All information provided above is true and correct.</p>
+        <p>I agree to abide by the rules and regulations of the University.</p>
+        <p>I understand that incomplete or false information may result in disqualification of my registration.</p>
+        <p>I accept that tuition and registration fees are non-refundable unless otherwise stated by University policy.</p>
+
+        <h3>Declaration</h3>
+        <p>I hereby confirm that I have read and understood the above Terms & Conditions.</p>
+        <label for="signature">Signature:</label>
+        <input type="text" id="signature" name="signature" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</div>
+<footer>
+    <div class="container2">
+     <div class="footer-content">
+                <h3 style="color:#fff;"><u>About us</u></h3>
+                <p>Email: info@vvvarsity.co.za</p>
+                <p>Call:018 212 3345</p>
+                <p> Address: <br> 12 West Street
+                   <br> Mahikeng  <br>2745.
+                </p>
+               </div> 
+               <div class="footer-content">
+                <h3 style="color:#fff;"><u>Quick links</u></h3>
+                  <ul class="list">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="registration.html">Apply</a></li>
+                    
+                  </ul>
+               </div> 
+               <div class="footer-content">
+                
+                <h3 style="color:#fff;"><u>Follow us</u></h3>
+                <li><img src="Images/facebook.png" style="height:40px;"><a href="#"> @V.V.Varsity</a></li>
+                <li><img src="Images/instagram.png"style="height:40px;"> <a href="#">@vv_varsity</li></a>
+                <li><img src="Images/twitter.png"style="height:40px;">  <a href="#"> @vv_varsity_sa</li></a>
+               </div> 
+            </div>
+            <div class="bottom-bar">
+                <p>&copy; 2025 V.V. Varsity. All rights reserved</p>
+            </div>
+    </div>
+
+<script>
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    const content = document.getElementById('mainContent');
+    content.classList.remove('hidden');
+  });
+
+
+</script>
+</body>
+
+</html>
