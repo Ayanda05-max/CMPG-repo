@@ -45,7 +45,10 @@
 }
 
 
-.nav-right { justify-self: end; } 
+.nav-right { 
+  grid-template-columns: 2fr auto 3fr;
+  padding-left: 70px;
+} 
 
 .nav-right ul {
   list-style: none;
@@ -234,6 +237,7 @@
       <li><a href="home.html">home</a></li>
       <li><a href="about.html">About us</a></li>
       <li><a href="registration.html">Apply Now</a></li>
+      <li><a href = "login.html"> Login </a> </li>
     </ul>
   </div>
 </div>
@@ -299,7 +303,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const text = document.querySelector('container');
     text.style.animation = 'slideIn 3s forwards';
 });
